@@ -1,0 +1,190 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: now;
+    src: url(../media/fonts/NowLight.otf) format('opentype');
+}
+
+@font-face {
+    font-family: cardinal;
+    src: url(../media/fonts/Cardinal.ttf) format('truetype');
+}
+
+:root {
+    --text-font: now;
+    --title-font: cardinal;
+
+    --title-color: rgb(12, 12, 12);
+    --text-color: #F7F7F7;
+
+    --button-color: ;
+}
+
+
+body {
+    height: 100vh;
+
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-image: url("../media/img/variados/fondo_index.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+main {
+    width: 1000px;
+
+    padding: 1rem;
+
+    background: #153E7B;
+    background: linear-gradient(90deg, rgba(21, 62, 123, 0.7) 0%, rgba(130, 4, 4, 0.7) 100%);
+
+    border-radius: 25px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+
+    /* Animación */
+    opacity: 0;
+    animation: aparecer 3s ease forwards;
+}
+
+@keyframes aparecer {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+h1 {
+    margin-bottom: 2rem;
+
+    font-family: var(--title-font);
+    color: var(--title-color);
+    font-size: 50pt;
+
+    text-align: center;
+    text-shadow: 4px 4px 10px rgba(255, 255, 255, 0.7);
+}
+
+.opciones {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+
+    justify-content: center;
+}
+
+button {
+    width: 100%;
+    padding: 0.7rem;
+
+    font-family: var(--text-font);
+    color: var(--text-color);
+    font-size: 14pt;
+
+    text-align: center;
+
+    border-radius: 15px;
+    border: 2px solid #1f0033;
+
+    background-color: #240538;
+}
+
+button:hover {
+    box-shadow: 6px 6px 12px rgba(111, 83, 128, 0.8);
+}
+
+
+
+
+/* =========================
+   TABLET
+========================= */
+@media (max-width: 1024px) {
+
+    main {
+        width: 84%;
+        padding: 1.5rem;
+    }
+
+    h1 {
+        font-size: 38pt;
+    }
+
+    .opciones {
+        flex-direction: row;
+    }
+
+    button {
+        font-size: 13pt;
+        padding: 0.7rem 1rem;
+    }
+}
+
+
+/* =========================
+   TELÉFONO
+========================= */
+@media (max-width: 768px) {
+
+    body {
+        padding: 1rem;
+    }
+
+    main {
+        width: 100%;
+        padding: 1.2rem;
+        border-radius: 20px;
+    }
+
+    h1 {
+        font-size: 28pt;
+        margin-bottom: 1.5rem;
+
+        text-shadow: 2px 2px 8px rgba(255, 255, 255, 0.6);
+    }
+
+    .opciones {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.8rem;
+    }
+
+    button {
+        width: 100%;
+        max-width: 300px;
+
+        font-size: 12pt;
+        padding: 0.8rem;
+    }
+}
+
+
+/* =========================
+   TELÉFONOS PEQUEÑOS
+========================= */
+@media (max-width: 480px) {
+
+    h1 {
+        font-size: 22pt;
+    }
+
+    main {
+        padding: 1rem;
+    }
+
+    button {
+        font-size: 11pt;
+    }
+}
