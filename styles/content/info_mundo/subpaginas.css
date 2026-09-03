@@ -404,6 +404,43 @@ hr {
     color: #a88960;
 }
 
+.atencion {
+    display: block;
+
+    margin: 1rem;
+    padding: 1rem;
+
+    text-align: center;
+    font-style: italic;
+
+    color: #a88960;
+    background-color: rgba(168, 137, 96, 0.1);
+
+    border-radius: 10px;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.atencion:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 12px rgba(185, 214, 242, 0.5);
+}
+
+.salto {
+    display: block;
+
+    margin: 1rem 0;
+}
+
+.rojo {
+    color: #751a1a;
+    font-weight: bold;
+
+    text-shadow: 0px 0px 12px rgba(0, 0, 0, 0.8);
+}
+
 .regiones {
     display: flex;
     justify-content: center;
@@ -426,6 +463,11 @@ hr {
 }
 
 .regiones img:hover {
+    transform: scale(1.07);
+    box-shadow: 8px 8px 20px rgba(185, 214, 242, 0.5);
+}
+
+.selkaron img:hover {
     transform: scale(1.07);
     box-shadow: 8px 8px 20px rgba(185, 214, 242, 0.5);
 }
